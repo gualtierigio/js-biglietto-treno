@@ -1,22 +1,23 @@
-let Km = prompt("Quanti Km vuoi percorrere?");
+let km = prompt("Quanti Km vuoi percorrere?");
 
-let Age = prompt("Quanti anni hai?");
+let age = prompt("Quanti anni hai?");
 
-const KmPrice = (0,21);
+const kmPrice = 0.21;
 
-let TicketPrice = Km * KmPrice;
+let ticketPrice = km * kmPrice;
 
-const ScontoVenti = (TicketPrice * 20) / 100;
+const scontoVenti = (ticketPrice * 20) / 100;
 
-const ScontoQuaranta = (TicketPrice * 40) / 100;
+const scontoQuaranta = (ticketPrice * 40) / 100;
 
-if (Age < 18) {
-    FinalPrice = TicketPrice - ScontoVenti; 
+if (age < 18) {
+    finalPrice = ticketPrice - scontoVenti; 
 }
-else if (Age > 65) {
-    FinalPrice = TicketPrice - ScontoQuaranta;
+else if (age > 65) {
+    finalPrice = ticketPrice - scontoQuaranta;
+}
+else if (age >= 18 <= 65) {
+    finalPrice = ticketPrice;
 }
 
-console.log(FinalPrice)
-
-document.getElementById(FinalPrice).innerHTML
+document.getElementById("finalPrice").innerHTML = finalPrice
