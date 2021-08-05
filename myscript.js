@@ -21,3 +21,5 @@ else if (age >= 18 <= 65) {
 }
 
 document.getElementById("finalPrice").innerHTML = finalPrice
+
+finalPrice = (finalPrice.toFixed(2) + "$")
